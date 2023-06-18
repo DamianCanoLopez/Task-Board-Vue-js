@@ -4,7 +4,7 @@ import { ref} from "vue";
 const text = ref("");
 const emits = defineEmits(["onNewItem"]);
 
-function handleKeyDown(evt) {
+function handleKeyUp(evt) {
   if(text.value === "" && evt.key !== "Enter"){
     return;// Si el campo de texto está vacío y la tecla presionada no es "Enter", se sale de la función sin realizar ninguna acción adicional.
   }
@@ -21,6 +21,6 @@ function handleKeyDown(evt) {
 }
 </script>
 
-<template><input v-model="text" @keydown="handleKeyDown" placeholder="Add new task" /></template>
+<template><input v-model="text" @keyup="handleKeyUp" placeholder="Add new task" /></template>
 
 <style scoped></style>
