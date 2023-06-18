@@ -126,6 +126,7 @@ onMounted(() => {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.299);
     margin: 3%;
+    color:#000;
 }
 
 .board:hover{
